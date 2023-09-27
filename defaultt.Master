@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="defaultt.master.cs" Inherits="Electronic_items_2.defaultt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style=" width:1100px; margin:0 auto;">
+            <tr style=" width:1100px; height:50px; border-color:Aqua; background-color:white;">
+            <td style=" width:100px">
+                <asp:Image ID="Image1" runat="server" Height="100px"
+                    ImageUrl="~/Riyasingh/electrical-electronic-logo-design1.jpg" width="100px"
+                     EnableViewState="False" /></td>
+                     <div align="center">
+                     <h1 >ELECTRONIC SHOPPING CENTER<br />
+                     Save money. Live better!....
+                     </h1>
+                     </div>
+             <%--<td style=" width:780px" align="center">
+                 <asp:Label ID="Label1" runat="server" Text="ELECTRONIC SHOPPING CENTER" 
+                     Font-Bold="True" Font-Names="Algerian"  
+                     ForeColor="Black" Font-Size="35px"></asp:Label>
+                    <br /><b>Save money. Live better!....</b>
+                    </td>
+                 --%>
+
+                <%--SOCIAL MEDIA LOGO --%>    
+                    
+             <td style=" width:220px; text-align:right">
+                   
+                 <asp:ImageButton ID="ImageButton1" runat="server" Height="50px" style=" text-align:left" postbackurl=""
+                     ImageUrl="~/Riyasingh/logo.png.png" Width="50px" />
+
+                
+                 
+                  <asp:ImageButton ID="ImageButton2" runat="server" Height="50px" style="text-align:left" postbackurl=""
+                     ImageUrl="~/Riyasingh/logo1.png.png" Width="50px" />
+
+                
+
+                   <asp:ImageButton ID="ImageButton3" runat="server" Height="50px" 
+                     style="text-align:left" postbackurl=""
+                     ImageUrl="~/Riyasingh/logo2.png.png"  Width="50px" 
+                     onclick="ImageButton3_Click1" />
+
+                 <asp:ImageButton ID="ImageButton4" runat="server" Height="50px" style="text-align:left" postbackurl=""
+                     ImageUrl="~/Singh/imageicon.jpg" Width="50px" CausesValidation="False" />
+                 
+                 <asp:Label ID="Label2" runat="server" Text="Label" Font-Bold="True"></asp:Label>
+                </td>
+        </tr> 
+        <tr style=" width:100px; height:40px; background-color:Aqua ">
+            <td colspan="3">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                    StaticSubMenuIndent="19px">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="User Login" Value="User Login" NavigateUrl="~/Login1.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Registration" Value="Registration" 
+                            NavigateUrl="~/Reg.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/aboutUs.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                            NavigateUrl="~/contactUs.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#FF6666" BorderColor="#FF6666" 
+                        BorderStyle="Outset" ForeColor="White" Height="40px" />
+                    <StaticMenuItemStyle Font-Bold="True" Font-Size="Large" ForeColor="Black" 
+                        HorizontalPadding="54px" />
+                    <StaticSelectedStyle BackColor="#FF5050" BorderColor="#FF6666" 
+                        BorderStyle="Inset" ForeColor="#666666" Height="40px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr style="width:1110px; height:310px;">
+            <td colspan="3">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                     
+                     <%--Take a timer--%>
+                 <ContentTemplate>
+                     <asp:Timer ID="Timer1" runat="server" Interval="2000" ontick="Timer1_Tick">
+                     </asp:Timer>
+                     <asp:Image ID="Image2" runat="server" BackColor="White" BorderColor="Red" 
+                         BorderStyle="Double" Height="270px" Width="1440px" />
+                     &nbsp;
+                 </ContentTemplate>
+                </asp:UpdatePanel>
+            </td>
+        </tr>
+         <tr>
+            <td> <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            
+               <%--<asp:image id="image3" runat="server" imageurl="~/proimage/images1.jpeg" 
+                    width="272px" /></div>--%>
+                </asp:ContentPlaceHolder></td>
+        </tr>
+        <tr style="width:1100px; height:25px; background-color:Black; text-align:center; color:White">
+            <td colspan="3">
+                &copy online online electronic shopping pvt. | all rights reserved.
+            </td>
+        </tr>
+    
+
+    
+    </table>
+    
+     </div> 
+    
+    </form>
+</body>
+</html>
